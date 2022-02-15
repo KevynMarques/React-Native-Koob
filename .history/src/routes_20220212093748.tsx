@@ -1,0 +1,32 @@
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+import Home from './Pages/Home/index'
+import Content from './Pages/Content/index'
+
+const Stack = createNativeStackNavigator(); 
+
+export default function Routers(){
+  return(
+  <NavigationContainer>
+    <Stack.Navigator>
+     
+     <Stack.Screen 
+       name="Home"
+       component={Home}
+       options={{headerShown: false}}
+     />
+
+    <Stack.Screen 
+       name="Content"
+       component={Content}
+     />
+
+
+    </Stack.Navigator>
+  </NavigationContainer>
+
+
+  );
+}
